@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <title>V tag</title>
+      <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid&display=swap" rel="stylesheet" />
+      <style>
+         body {
+         font-family: 'Londrina Solid', cursive;
+         text-align: center;
+         padding-top: 10px;
+         background-image: url("https://raw.githubusercontent.com/baggZ-idk/random-ahh-web-files-/refs/heads/main/bg.png");
+         background-repeat: no-repeat;
+         background-position: center center;
+         background-size: cover;
+         background-attachment: fixed;
+         color: #fff;
+         }
+         img {
+         height: auto;
+         border-radius: 10px;
+         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+         margin: 0.5vw;
+         max-width: 20vw;
+         }
+         .section {
+         background: #3335;
+         border-radius: 4vh;
+         margin-left: 20%;
+         margin-right: 20%;
+         padding-bottom: 2vh;
+         backdrop-filter: blur(10px);
+         -webkit-backdrop-filter: blur(10px);
+         box-shadow: 0 0 20px 5px #0007;
+         }
+         .Socials-section {
+         background: #3335;
+         border-radius: 4vh;
+         margin: 20vw;
+         margin-top: 0;
+         margin-bottom: 2vh;
+         padding-bottom: 2vh;
+         backdrop-filter: blur(10px);
+         -webkit-backdrop-filter: blur(10px);
+         box-shadow: 0 0 3vh 2vh #0007;
+         }
+         #Socials {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         }
+         #Socials img {
+         width: 10vw;
+         height: 10vw;
+         margin: 0 0.5vw;
+         transition: transform 0.3s ease;
+         border-radius: 50%;
+         padding: 1vw;
+         }
+         #Socials img:hover {
+         transform: scale(1.1);
+         }
+         h1 {
+         font-size: 7vw;
+         color: #fff;
+         }
+         h2 {
+         font-size: 4vw;
+         color: #fff;
+         }
+      </style>
+   </head>
+   <body>
+      <h1>V tag</h1>
+      <div class="Socials-section">
+         <h2>Socials</h2>
+         <div id="Socials">
+            <a href="https://discord.gg/vtag/" target="_blank"><img src="Images/Discord.webp"></a>
+            <a href="www.meta.com/en-gb/experiences/v-tag/7348291305214277/" target="_blank"><img src="Images/meta.png"></a>
+         </div>
+      </div>
+
+      <div class="section">
+        <h2>About</h2>
+        <h3>Welcome to V Tag, the exhilarating fan game inspired by the beloved Gorilla Tag phenomenon! Get ready to swing, leap, and dodge your way through a series of thrilling maps designed to push your skills to the limit. With its unique blend of heart-pounding action and imaginative environments, V Tag offers an unforgettable gaming experience like no other.</h3>
+        <h3>Embark on your gorilla adventure in the "Only Up" map, where verticality is the name of the game. Climb towering skyscrapers, soar through the clouds, and outmaneuver your opponents in a race to the top. With every leap, you'll feel the adrenaline rush as you strive to claim the ultimate high ground.</h3>
+      </div>
+
+      <div class="section">
+        <h2>News</h2>
+        <h3 id="news">loading...</h3>
+    </div>
+
+    <script>
+            fetch("https://pastebin.com/raw/kmnqs1c0/")
+                .then(response => response.text())
+                .then(text => {
+                    document.getElementById("news").textContent = text;
+                })
+                .catch(error => {
+                    console.error("Error fetching news:", error);
+                    document.getElementById("news").textContent = "Failed to load news.";
+                });
+    </script>
+   </body>
+</html>
